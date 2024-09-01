@@ -1,6 +1,4 @@
-const firstName = document.getElementById("fName").value
-const lastName = document.getElementById("lName").value
-const id = document.getElementById("id").value
+
 
 class Person{
 constructor(id, firstName, lastName){
@@ -16,6 +14,10 @@ document.getElementById("output").innerText = JSON.stringify(response);
 }
 
 const create = () => {
+event.preventDefault()
+const firstName = document.getElementById("fName").value
+const lastName = document.getElementById("lName").value
+const id = document.getElementById("id").value
   const person = new Person(id, firstName, lastName);
   const personData = JSON.stringify(person);
 
